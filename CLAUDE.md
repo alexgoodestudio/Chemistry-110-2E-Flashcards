@@ -4,8 +4,8 @@ A single-file, self-contained flashcard/quiz web app for CHM-110 (College Chemis
 built by Alex Goode as a study tool. Modeled after an existing BIO-101 flashcard app
 built the same way (chapter tabs, flip cards, self-tracking progress).
 
-Local file in this folder: `Chemistry-110-2E-Flashcards.html` (may be renamed
-`index.html` for GitHub Pages).
+Local file in this folder: `index.html` (renamed from `Chemistry-110-2E-Flashcards.html`
+for GitHub Pages). Repo: `github.com/alexgoodestudio/Chemistry-110-2E-Flashcards`.
 
 ## Tech stack / architecture
 
@@ -72,8 +72,8 @@ it's the settled design. Do not silently redesign; if changing style, confirm sc
 - A `FAQPage` JSON-LD block is **generated dynamically at runtime** from `SEED` +
   `EXPLANATIONS` (see `injectFAQSchema()`) — don't hand-write a duplicate one, it'll
   drift out of sync. If you change how cards store answers, update that function.
-- Canonical URL assumes GitHub Pages at `https://alexgoodestudio.github.io/chem110-flashcards/`
-  — update this if the repo/Pages URL differs.
+- Canonical URL is `https://alexgoodestudio.github.io/Chemistry-110-2E-Flashcards/`
+  (matches the actual repo name) — update this if the repo/Pages URL ever changes.
 
 ## Attribution / footer
 
