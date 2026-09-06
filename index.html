@@ -134,7 +134,7 @@
 </div>
 
 <script>
-const CARDS_VERSION = "2026-09-06-e";
+const CARDS_VERSION = "2026-09-06-f";
 const LABELS = ["A","B","C","D","E"];
 const CHAPTER_ORDER = ["Textbook Review 1.1\u20131.6","Textbook Review 2.3\u20132.7","Ch 2: Atoms/PTE","Sig Figs / Measurement"];
 
@@ -196,6 +196,15 @@ const SEED = [
   {id:"c2q14",chapter:"Ch 2: Atoms/PTE",number:14,type:"mc",
     question:"True or False: The transition metals are groups 3-12, and the representative elements are groups 1-2 and 13-18.",
     options:["True","False"],answerIndex:0},
+  {id:"c2q15",chapter:"Ch 2: Atoms/PTE",number:15,type:"mc",
+    question:"True or False: Alkali and Alkaline Earth Metals lose electrons to form cations (+1 and +2) in order to be stable.",
+    options:["True","False"],answerIndex:0},
+  {id:"c2q16",chapter:"Ch 2: Atoms/PTE",number:16,type:"mc",
+    question:"How many electrons does the tellurium (Te) ion have? Te (atomic # 52) forms a -2 ion.",
+    options:["54","128","50","52"],answerIndex:0},
+  {id:"c2q17",chapter:"Ch 2: Atoms/PTE",number:17,type:"mc",
+    question:"How many protons, neutrons, and electrons are in ⁹⁷₄₂Mo⁺²?",
+    options:["97 protons, 42 neutrons, 44 electrons","42 protons, 55 neutrons, 40 electrons","55 protons, 42 neutrons, 55 electrons","42 protons, 55 neutrons, 44 electrons"],answerIndex:1},
 
   // ---- Sig Figs / Measurement ----
   {id:"sfq1",chapter:"Sig Figs / Measurement",number:1,type:"mc",
@@ -367,6 +376,9 @@ const EXPLANATIONS = {
   c2q12:"Work from the definition of each slot in ᴬ₂X notation: the SUBSCRIPT (bottom) is the atomic number Z = protons, and the SUPERSCRIPT (top) is the mass number A = protons + neutrons. Neutral atom with 23 electrons → 23 protons → Z = 23, which is what makes it vanadium (V) in the first place. A = 23 + 29 = 52. So: ⁵²₂₃V. The trap answer ⁵²₂₉V puts the NEUTRON count (29) in the subscript slot — but the neutron count never appears directly in the notation; it's only recoverable as A − Z. Sanity check: the subscript must always match the element's spot on the periodic table (V is element 23, not 29 — 29 is copper).",
   c2q13:"A +3 charge means the atom LOST 3 electrons — so it has 3 more protons than its current 28 electrons: 28 + 3 = 31 protons → element 31 → gallium (Ga). The trap is Ni (element 28): that matches the electron count, but electron count only equals atomic number for NEUTRAL atoms. For ions, always solve protons = electrons + charge first, then look up the element by proton count.",
   c2q14:"Both halves of this statement are accurate: transition metals fill the middle block, groups 3–12, and representative (main-group) elements are the tall columns on the far left (groups 1–2) and far right (groups 13–18), including the noble gases in group 18. Since both parts check out, the whole statement is True.",
+  c2q15:"Alkali metals (group 1) have just 1 valence electron; losing it gets them to a full, stable outer shell matching the nearest noble gas — forming a +1 cation. Alkaline earth metals (group 2) have 2 valence electrons and lose both the same way, forming a +2 cation. Both families lose electrons (rather than gain) because they have very few valence electrons to begin with — losing a couple is a much shorter path to stability than gaining six or seven.",
+  c2q16:"Neutral tellurium has 52 electrons (matching its atomic number, 52). A -2 charge means the atom GAINED 2 electrons (protons never change during ion formation) → 52 + 2 = 54 electrons. Common trap: subtracting instead of adding — remember, negative charge always means extra electrons.",
+  c2q17:"Break it into three separate lookups: PROTONS = atomic number (the subscript, 42) — this identifies the element as molybdenum (Mo) and never changes. NEUTRONS = mass number − atomic number = 97 − 42 = 55. ELECTRONS = protons − charge = 42 − 2 = 40 (a positive charge means electrons were lost, so subtract).",
   sfq1:"80.30 has 4 sig figs; 0.2 has only 1 sig fig. In multiplication, the answer is limited to the FEWEST sig figs among the factors \u2014 so the result needs just 1 sig fig. Raw product: 80.30 \u00d7 0.2 = 16.06. Rounded to 1 sig fig \u2192 20, written WITHOUT a decimal point. Writing '20.' would signal 2 sig figs (too much precision).",
   sfq2:"0.0234 has 3 sig figs (leading zeros never count); 139.37 has 5 sig figs. Keep the fewest \u2014 3 sig figs. Raw product: 0.0234 \u00d7 139.37 = 3.261258. Rounded to 3 sig figs \u2192 3.26.",
   sfq3:"The core rule for multiplication and division: your answer can't claim more precision than your least-precise measurement. Count the sig figs in each number being multiplied/divided, and match the answer's sig figs to whichever factor has the fewest. (Different rule for addition/subtraction \u2014 that goes by decimal places.)",
