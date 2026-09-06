@@ -134,7 +134,7 @@
 </div>
 
 <script>
-const CARDS_VERSION = "2026-09-06-c";
+const CARDS_VERSION = "2026-09-06-d";
 const LABELS = ["A","B","C","D","E"];
 const CHAPTER_ORDER = ["Textbook Review 1.1\u20131.6","Textbook Review 2.3\u20132.7","Ch 2: Atoms/PTE","Sig Figs / Measurement"];
 
@@ -187,6 +187,12 @@ const SEED = [
       ["The number of protons plus neutrons in an atom.","2. mass number"],
       ["An atom that has lost electrons.","4. cation"]
     ]},
+  {id:"c2q12",chapter:"Ch 2: Atoms/PTE",number:12,type:"mc",
+    question:"What is the symbol notation for a neutral atom with 23 electrons and 29 neutrons?",
+    options:["⁵²₂₉V","₅₂²³V","₂₉²³V","⁵²₂₃V"],answerIndex:3},
+  {id:"c2q13",chapter:"Ch 2: Atoms/PTE",number:13,type:"mc",
+    question:"What element has 28 electrons and a +3 charge?",
+    options:["P","Ga","Ni","Se"],answerIndex:1},
 
   // ---- Sig Figs / Measurement ----
   {id:"sfq1",chapter:"Sig Figs / Measurement",number:1,type:"mc",
@@ -355,6 +361,8 @@ const EXPLANATIONS = {
   c2q9:"Anions form when an atom GAINS electrons. Extra (negatively charged) electrons mean more negative charge than positive \u2014 so the atom becomes negatively charged overall. Memory anchor: 'an-ion' sounds like 'a negative ion.'",
   c2q10:"Cations form when an atom LOSES electrons. Losing negatively charged electrons leaves more protons than electrons \u2014 so the atom becomes positively charged overall. Memory anchor: the 't' in 'cation' looks like a plus sign (+), so cation = positive.",
   c2q11:"Two pairs are easy to mix up here: MASS NUMBER (protons + neutrons) is the whole-number nucleon count for one specific atom, while ATOMIC MASS is the decimal weighted-average mass across all naturally occurring isotopes of that element \u2014 the number you see on the periodic table. 'Average mass of all the different isotopes' is describing atomic mass, not mass number, even though both involve counting mass. The other three are more straightforward: protons = the element's identity (atomic number), isotope = same element, different neutron count, and cation = lost electrons (positive charge).",
+  c2q12:"Work from the definition of each slot in ᴬ₂X notation: the SUBSCRIPT (bottom) is the atomic number Z = protons, and the SUPERSCRIPT (top) is the mass number A = protons + neutrons. Neutral atom with 23 electrons → 23 protons → Z = 23, which is what makes it vanadium (V) in the first place. A = 23 + 29 = 52. So: ⁵²₂₃V. The trap answer ⁵²₂₉V puts the NEUTRON count (29) in the subscript slot — but the neutron count never appears directly in the notation; it's only recoverable as A − Z. Sanity check: the subscript must always match the element's spot on the periodic table (V is element 23, not 29 — 29 is copper).",
+  c2q13:"A +3 charge means the atom LOST 3 electrons — so it has 3 more protons than its current 28 electrons: 28 + 3 = 31 protons → element 31 → gallium (Ga). The trap is Ni (element 28): that matches the electron count, but electron count only equals atomic number for NEUTRAL atoms. For ions, always solve protons = electrons + charge first, then look up the element by proton count.",
   sfq1:"80.30 has 4 sig figs; 0.2 has only 1 sig fig. In multiplication, the answer is limited to the FEWEST sig figs among the factors \u2014 so the result needs just 1 sig fig. Raw product: 80.30 \u00d7 0.2 = 16.06. Rounded to 1 sig fig \u2192 20, written WITHOUT a decimal point. Writing '20.' would signal 2 sig figs (too much precision).",
   sfq2:"0.0234 has 3 sig figs (leading zeros never count); 139.37 has 5 sig figs. Keep the fewest \u2014 3 sig figs. Raw product: 0.0234 \u00d7 139.37 = 3.261258. Rounded to 3 sig figs \u2192 3.26.",
   sfq3:"The core rule for multiplication and division: your answer can't claim more precision than your least-precise measurement. Count the sig figs in each number being multiplied/divided, and match the answer's sig figs to whichever factor has the fewest. (Different rule for addition/subtraction \u2014 that goes by decimal places.)",
