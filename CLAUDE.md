@@ -4,13 +4,16 @@ A single-file, self-contained flashcard/quiz web app for CHM-110 (College Chemis
 built by Alex Goode as a study tool. Modeled after an existing BIO-101 flashcard app
 built the same way (chapter tabs, flip cards, self-tracking progress).
 
-Local file in this folder: `index.html` (renamed from `Chemistry-110-2E-Flashcards.html`
-for GitHub Pages). Repo: `github.com/alexgoodestudio/Chemistry-110-2E-Flashcards`.
+Local files in this folder: `index.html` (renamed from `Chemistry-110-2E-Flashcards.html`
+for GitHub Pages) plus `app.js`. Repo: `github.com/alexgoodestudio/Chemistry-110-2E-Flashcards`.
 
 ## Tech stack / architecture
 
-- **One file**: no build step, no bundler, no framework. Plain HTML/CSS/vanilla JS in a
-  single `<script>` tag.
+- **Two files**: `index.html` (markup/CSS/SEO tags) + `app.js` (all logic, including
+  `SEED`/`EXPLANATIONS`). No build step, no bundler, no framework — plain HTML/CSS/
+  vanilla JS. Split out of a single file on 2026-09-06 so GitHub's language stats
+  reflect the JS instead of counting everything as HTML; `index.html` just loads
+  `<script src="app.js"></script>`.
 - No external JS dependencies. The only external resource is a Google Fonts `@import`
   (`Press Start 2P` + `Baloo 2`) — this loads fine since it's the *user's* browser
   fetching it, not a build-time dependency.
