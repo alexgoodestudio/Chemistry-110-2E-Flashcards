@@ -134,16 +134,16 @@
 </div>
 
 <script>
-const CARDS_VERSION = "2026-09-06-f";
+const CARDS_VERSION = "2026-09-06-k";
 const LABELS = ["A","B","C","D","E"];
-const CHAPTER_ORDER = ["Textbook Review 1.1\u20131.6","Textbook Review 2.3\u20132.7","Ch 2: Atoms/PTE","Sig Figs / Measurement"];
+const CHAPTER_ORDER = ["Chapter 1","Chapter 2"];
 
 const SEED = [
   // ---- Ch 2: Atoms/PTE (quiz-sourced) ----
-  {id:"c2q1",chapter:"Ch 2: Atoms/PTE",number:1,type:"mc",
+  {id:"c2q1",chapter:"Chapter 2",number:12,type:"mc",
     question:"How many electrons will nitrogen (N) gain or lose to be stable when it forms a -3 charge?",
     options:["gain 3","lose 5","lose 3","gain 5"],answerIndex:0},
-  {id:"c2q2",chapter:"Ch 2: Atoms/PTE",number:2,type:"match",
+  {id:"c2q2",chapter:"Chapter 2",number:13,type:"match",
     question:"Match the part of the periodic table with its correct description.",
     pairs:[
       ["Found on the right side of the stair-step line, gain electrons to be stable","nonmetals"],
@@ -152,33 +152,33 @@ const SEED = [
       ["Group 17","Halogens"],
       ["Found along the stair-step line, except aluminum","metalloids"]
     ]},
-  {id:"c2q3",chapter:"Ch 2: Atoms/PTE",number:3,type:"mc",
+  {id:"c2q3",chapter:"Chapter 2",number:14,type:"mc",
     question:"Which statement about subatomic particles is NOT true?",
     options:["Protons and electrons have opposite charges.","Protons and neutrons have the same charge","Protons and neutrons have almost the same mass."],
     answerIndex:1},
-  {id:"c2q4",chapter:"Ch 2: Atoms/PTE",number:4,type:"mc",
+  {id:"c2q4",chapter:"Chapter 2",number:15,type:"mc",
     question:"The number of protons in one atom of an element is that element's __________.",
     options:["atomic number","atomic mass","mass number"],answerIndex:0},
-  {id:"c2q5",chapter:"Ch 2: Atoms/PTE",number:5,type:"mc",
+  {id:"c2q5",chapter:"Chapter 2",number:16,type:"mc",
     question:"How many electrons does the Sr ion have? You know its ion charge because it is in group 2 on the periodic table and has +2 charge.",
     options:["36 (protons 38, minus 2 for the +2 charge)","38 (this is the neutral-atom count \u2014 a trap)","40 (too high \u2014 not supported by Sr's atomic number)"],
     answerIndex:0},
-  {id:"c2q6",chapter:"Ch 2: Atoms/PTE",number:6,type:"mc",
+  {id:"c2q6",chapter:"Chapter 2",number:17,type:"mc",
     question:"True or false: atoms, molecules, and ions are separate, non-overlapping categories.",
     options:["False \u2014 a particle can be more than one at once","True \u2014 each particle only ever fits one category"],answerIndex:0},
-  {id:"c2q7",chapter:"Ch 2: Atoms/PTE",number:7,type:"mc",
+  {id:"c2q7",chapter:"Chapter 2",number:18,type:"mc",
     question:"Do you need to memorize the entire periodic table for gen chem?",
     options:["No \u2014 the full table is provided as reference; a small high-value set (common symbols, ion charges by group, polyatomic ions) is worth knowing cold","Yes \u2014 every atomic mass and configuration for all 118 elements"],answerIndex:0},
-  {id:"c2q8",chapter:"Ch 2: Atoms/PTE",number:8,type:"mc",
+  {id:"c2q8",chapter:"Chapter 2",number:19,type:"mc",
     question:"When can you safely assume an atom's electron count equals its proton count (atomic number)?",
     options:["Always, unless the question mentions an ion, a charge, or gaining/losing electrons","Only for the first 20 elements","Never \u2014 you always have to calculate it separately","Only for nonmetals"],answerIndex:0},
-  {id:"c2q9",chapter:"Ch 2: Atoms/PTE",number:9,type:"mc",
+  {id:"c2q9",chapter:"Chapter 2",number:20,type:"mc",
     question:"What is an anion?",
     options:["An anion is defined as an atom that has gained electrons and forms a negative charge.","An anion is defined as an atom that has gained electrons and forms a positive charge.","An anion is defined as an atom that has lost electrons and forms a negative charge."],answerIndex:0},
-  {id:"c2q10",chapter:"Ch 2: Atoms/PTE",number:10,type:"mc",
+  {id:"c2q10",chapter:"Chapter 2",number:21,type:"mc",
     question:"What is a cation?",
     options:["A cation is defined as an atom that has gained electrons and forms a negative charge.","A cation is defined as an atom that has lost electrons and forms a positive charge.","A cation is defined as an atom that has gained electrons and forms a positive charge."],answerIndex:1},
-  {id:"c2q11",chapter:"Ch 2: Atoms/PTE",number:11,type:"match",
+  {id:"c2q11",chapter:"Chapter 2",number:22,type:"match",
     question:"Match the following term with its correct definition or description.",
     pairs:[
       ["Determines the identity of the element.","1. number of protons"],
@@ -187,41 +187,46 @@ const SEED = [
       ["The number of protons plus neutrons in an atom.","2. mass number"],
       ["An atom that has lost electrons.","4. cation"]
     ]},
-  {id:"c2q12",chapter:"Ch 2: Atoms/PTE",number:12,type:"mc",
+  {id:"c2q12",chapter:"Chapter 2",number:23,type:"mc",
     question:"What is the symbol notation for a neutral atom with 23 electrons and 29 neutrons?",
     options:["⁵²₂₉V","₅₂²³V","₂₉²³V","⁵²₂₃V"],answerIndex:3},
-  {id:"c2q13",chapter:"Ch 2: Atoms/PTE",number:13,type:"mc",
+  {id:"c2q13",chapter:"Chapter 2",number:24,type:"mc",
     question:"What element has 28 electrons and a +3 charge?",
     options:["P","Ga","Ni","Se"],answerIndex:1},
-  {id:"c2q14",chapter:"Ch 2: Atoms/PTE",number:14,type:"mc",
+  {id:"c2q14",chapter:"Chapter 2",number:25,type:"mc",
     question:"True or False: The transition metals are groups 3-12, and the representative elements are groups 1-2 and 13-18.",
     options:["True","False"],answerIndex:0},
-  {id:"c2q15",chapter:"Ch 2: Atoms/PTE",number:15,type:"mc",
+  {id:"c2q15",chapter:"Chapter 2",number:26,type:"mc",
     question:"True or False: Alkali and Alkaline Earth Metals lose electrons to form cations (+1 and +2) in order to be stable.",
     options:["True","False"],answerIndex:0},
-  {id:"c2q16",chapter:"Ch 2: Atoms/PTE",number:16,type:"mc",
+  {id:"c2q16",chapter:"Chapter 2",number:27,type:"mc",
     question:"How many electrons does the tellurium (Te) ion have? Te (atomic # 52) forms a -2 ion.",
     options:["54","128","50","52"],answerIndex:0},
-  {id:"c2q17",chapter:"Ch 2: Atoms/PTE",number:17,type:"mc",
+  {id:"c2q17",chapter:"Chapter 2",number:28,type:"mc",
     question:"How many protons, neutrons, and electrons are in ⁹⁷₄₂Mo⁺²?",
     options:["97 protons, 42 neutrons, 44 electrons","42 protons, 55 neutrons, 40 electrons","55 protons, 42 neutrons, 55 electrons","42 protons, 55 neutrons, 44 electrons"],answerIndex:1},
-
+  {id:"c2q18",chapter:"Chapter 2",number:29,type:"mc",
+    question:"Due to periodicity, which of the following elements has chemical behavior similar to that of Oxygen? Elements in the same group behave similarly.",
+    options:["bromine","carbon","sulfur"],answerIndex:2},
+  {id:"c2q19",chapter:"Chapter 2",number:30,type:"mc",
+    question:"Which statement is correct about chlorine-35 and chlorine-37?",
+    options:["They have a different number of protons and electrons, but the same number of neutrons.","They have the same number of protons, but a different number of electrons and neutrons.","They have the same number of protons and electrons, but a different number of neutrons."],answerIndex:2},
   // ---- Sig Figs / Measurement ----
-  {id:"sfq1",chapter:"Sig Figs / Measurement",number:1,type:"mc",
+  {id:"sfq1",chapter:"Chapter 1",number:11,type:"mc",
     question:"80.30 \u00d7 0.2 = ? (answer with correct sig figs)",
     options:["20","20.","16","16.1"],answerIndex:0},
-  {id:"sfq2",chapter:"Sig Figs / Measurement",number:2,type:"mc",
+  {id:"sfq2",chapter:"Chapter 1",number:12,type:"mc",
     question:"0.0234 \u00d7 139.37 = ? (answer with correct sig figs)",
     options:["3.26","3.261","3.2613","3.3"],answerIndex:0},
-  {id:"sfq3",chapter:"Sig Figs / Measurement",number:3,type:"mc",
+  {id:"sfq3",chapter:"Chapter 1",number:13,type:"mc",
     question:"General rule: multiplying/dividing measurements, how many sig figs does the answer get?",
     options:["The same number of sig figs as the factor with the FEWEST sig figs","The same number of sig figs as the factor with the MOST sig figs","Always round to 2 sig figs, regardless of the factors","The sum of all sig figs across every factor"],answerIndex:0},
 
   // ---- Textbook Review 2.3-2.7 ----
-  {id:"tr2q1",chapter:"Textbook Review 2.3\u20132.7",number:1,type:"mc",
+  {id:"tr2q1",chapter:"Chapter 2",number:1,type:"mc",
     question:"(2.3, Ex.10) In what way are isotopes of a given element always different? In what way(s) are they always the same?",
     options:["Different: number of neutrons (and mass number). Same: number of protons (atomic number)","Different: number of protons. Same: number of neutrons","Different: number of electrons only. Same: everything else","Isotopes of the same element are identical in every way"],answerIndex:0},
-  {id:"tr2q2",chapter:"Textbook Review 2.3\u20132.7",number:2,type:"match",
+  {id:"tr2q2",chapter:"Chapter 2",number:2,type:"match",
     question:"(2.3, Ex.16) Find protons, neutrons, electrons, and name the element for each isotope/ion.",
     pairs:[
       ["(a) Z=9, A=18, charge 1\u2212","9 protons, 9 neutrons (18\u22129), 10 electrons (9+1) \u2014 Fluorine (F)"],
@@ -229,13 +234,13 @@ const SEED = [
       ["(c) Z=53, A=131, charge 1\u2212","53 protons, 78 neutrons (131\u221253), 54 electrons (53+1) \u2014 Iodine (I)"],
       ["(d) Z=81, A=201, charge 1+","81 protons, 120 neutrons (201\u221281), 80 electrons (81\u22121) \u2014 Thallium (Tl)"]
     ]},
-  {id:"tr2q3",chapter:"Textbook Review 2.3\u20132.7",number:3,type:"mc",
+  {id:"tr2q3",chapter:"Chapter 2",number:3,type:"mc",
     question:"(2.3, Ex.23) Bromine has two isotopes: \u2077\u2079Br (mass 78.9183 amu, 50.69% abundance) and \u2078\u00b9Br (mass 80.9163 amu, 49.31% abundance). Calculate bromine's average atomic mass.",
     options:["79.90 amu","79.00 amu","80.92 amu","78.92 amu"],answerIndex:0},
-  {id:"tr2q4",chapter:"Textbook Review 2.3\u20132.7",number:4,type:"mc",
+  {id:"tr2q4",chapter:"Chapter 2",number:4,type:"mc",
     question:"(2.4, Ex.27) Why does the symbol for the element oxygen (O) differ from the formula for a molecule of oxygen gas (O\u2082)?",
     options:["O represents a single oxygen atom; oxygen naturally occurs as a diatomic molecule (two bonded atoms), so O\u2082 shows that pairing","There is no real difference \u2014 O and O\u2082 mean the same thing","O\u2082 means there are 2 different types of oxygen","The subscript 2 indicates the charge on the oxygen atom"],answerIndex:0},
-  {id:"tr2q5",chapter:"Textbook Review 2.3\u20132.7",number:5,type:"match",
+  {id:"tr2q5",chapter:"Chapter 2",number:5,type:"match",
     question:"(2.4, Ex.31) Determine the empirical formula for each compound.",
     pairs:[
       ["(a) caffeine C\u2088H\u2081\u2080N\u2084O\u2082","C\u2084H\u2085N\u2082O (divide all subscripts by 2)"],
@@ -244,7 +249,7 @@ const SEED = [
       ["(d) glucose C\u2086H\u2081\u2082O\u2086","CH\u2082O (divide by 6)"],
       ["(e) ascorbic acid C\u2086H\u2088O\u2086","C\u2083H\u2084O\u2083 (divide by 2)"]
     ]},
-  {id:"tr2q6",chapter:"Textbook Review 2.3\u20132.7",number:6,type:"match",
+  {id:"tr2q6",chapter:"Chapter 2",number:6,type:"match",
     question:"(2.5, Ex.37) Classify each as metal or nonmetal, then as main-group, transition, or inner transition.",
     pairs:[
       ["uranium","metal, inner transition (actinide)"],
@@ -258,7 +263,7 @@ const SEED = [
       ["carbon","nonmetal, main-group"],
       ["potassium","metal, main-group"]
     ]},
-  {id:"tr2q7",chapter:"Textbook Review 2.3\u20132.7",number:7,type:"match",
+  {id:"tr2q7",chapter:"Chapter 2",number:7,type:"match",
     question:"(2.5, Ex.41) Use the periodic table to give the name and symbol for each described element.",
     pairs:[
       ["(a) noble gas, same period as germanium (period 4)","Krypton, Kr"],
@@ -266,7 +271,7 @@ const SEED = [
       ["(c) halogen, same period as lithium (period 2)","Fluorine, F"],
       ["(d) chalcogen, same period as cadmium (period 5)","Tellurium, Te"]
     ]},
-  {id:"tr2q8",chapter:"Textbook Review 2.3\u20132.7",number:8,type:"match",
+  {id:"tr2q8",chapter:"Chapter 2",number:8,type:"match",
     question:"(2.6, Ex.45) Predict whether each chloride is ionic or covalent.",
     pairs:[
       ["KCl","Ionic (metal + nonmetal)"],
@@ -276,7 +281,7 @@ const SEED = [
       ["PCl\u2085","Covalent (nonmetal + nonmetal)"],
       ["CCl\u2084","Covalent (nonmetal + nonmetal)"]
     ]},
-  {id:"tr2q9",chapter:"Textbook Review 2.3\u20132.7",number:9,type:"match",
+  {id:"tr2q9",chapter:"Chapter 2",number:9,type:"match",
     question:"(2.6, Ex.49) Write the formula of the compound formed by each ion pair.",
     pairs:[
       ["(a) Ca\u00b2\u207a, S\u00b2\u207b","CaS"],
@@ -285,7 +290,7 @@ const SEED = [
       ["(d) Na\u207a, HPO\u2084\u00b2\u207b","Na\u2082HPO\u2084"],
       ["(e) Mg\u00b2\u207a, PO\u2084\u00b3\u207b","Mg\u2083(PO\u2084)\u2082"]
     ]},
-  {id:"tr2q10",chapter:"Textbook Review 2.3\u20132.7",number:10,type:"match",
+  {id:"tr2q10",chapter:"Chapter 2",number:10,type:"match",
     question:"(2.7, Ex.51) Name the following binary ionic compounds.",
     pairs:[
       ["(a) CsCl","cesium chloride"],
@@ -295,7 +300,7 @@ const SEED = [
       ["(e) HBr","hydrogen bromide"],
       ["(f) AlF\u2083","aluminum fluoride"]
     ]},
-  {id:"tr2q11",chapter:"Textbook Review 2.3\u20132.7",number:11,type:"match",
+  {id:"tr2q11",chapter:"Chapter 2",number:11,type:"match",
     question:"(2.7, Ex.57) These metals can have more than one ionic charge \u2014 name each compound.",
     pairs:[
       ["(a) Cr\u2082O\u2083","chromium(III) oxide"],
@@ -306,10 +311,10 @@ const SEED = [
     ]},
 
   // ---- Textbook Review 1.1-1.6 ----
-  {id:"tr1q1",chapter:"Textbook Review 1.1\u20131.6",number:1,type:"mc",
+  {id:"tr1q1",chapter:"Chapter 1",number:1,type:"mc",
     question:"(1.1, Ex.2) Classify each as most similar to a hypothesis, a law, or a theory: (a) Falling barometric pressure precedes the onset of bad weather (b) All life on Earth has evolved from a common, primitive organism through natural selection (c) My truck's gas mileage has dropped significantly, probably because it's due for a tune-up",
     options:["(a) law, (b) theory, (c) hypothesis","(a) hypothesis, (b) law, (c) theory","(a) theory, (b) hypothesis, (c) law","All three are laws"],answerIndex:0},
-  {id:"tr1q2",chapter:"Textbook Review 1.1\u20131.6",number:2,type:"match",
+  {id:"tr1q2",chapter:"Chapter 1",number:2,type:"match",
     question:"(1.2, Ex.16) Classify each as an element, a compound, or a mixture.",
     pairs:[
       ["copper","Element"],["water","Compound"],["nitrogen","Element"],["sulfur","Element"],
@@ -317,7 +322,7 @@ const SEED = [
       ["molecules with two iodine atoms (I\u2082)","Element \u2014 still only ONE type of atom, just paired up"],
       ["gasoline","Mixture"]
     ]},
-  {id:"tr1q3",chapter:"Textbook Review 1.1\u20131.6",number:3,type:"match",
+  {id:"tr1q3",chapter:"Chapter 1",number:3,type:"match",
     question:"(1.3, Ex.27) Classify each change as physical or chemical.",
     pairs:[
       ["(a) condensation of steam","Physical (phase change, same substance H\u2082O)"],
@@ -326,22 +331,22 @@ const SEED = [
       ["(d) dissolving sugar in water","Physical (recoverable unchanged by evaporation)"],
       ["(e) melting of gold","Physical (phase change, same atoms)"]
     ]},
-  {id:"tr1q4",chapter:"Textbook Review 1.1\u20131.6",number:4,type:"match",
+  {id:"tr1q4",chapter:"Chapter 1",number:4,type:"match",
     question:"(1.3, Ex.32) Classify each property as extensive or intensive.",
     pairs:[
       ["volume","Extensive"],["temperature","Intensive"],["humidity","Intensive"],
       ["heat","Extensive"],["boiling point","Intensive"]
     ]},
-  {id:"tr1q5",chapter:"Textbook Review 1.1\u20131.6",number:5,type:"match",
+  {id:"tr1q5",chapter:"Chapter 1",number:5,type:"match",
     question:"(1.4, Ex.38) Give the name of the SI prefix for each power of ten.",
     pairs:[
       ["(a) 10\u00b3","kilo (k)"],["(b) 10\u207b\u00b2","centi (c)"],["(c) 0.1 (=10\u207b\u00b9)","deci (d)"],
       ["(d) 10\u207b\u00b3","milli (m)"],["(e) 1,000,000 (=10\u2076)","mega (M)"],["(f) 0.000001 (=10\u207b\u2076)","micro (\u03bc)"]
     ]},
-  {id:"tr1q6",chapter:"Textbook Review 1.1\u20131.6",number:6,type:"mc",
+  {id:"tr1q6",chapter:"Chapter 1",number:6,type:"mc",
     question:"(1.4, Ex.40) A piece of jewelry has a mass of 132.6 g. A graduated cylinder with 48.6 mL water rises to 61.2 mL when the jewelry is submerged. Find its density and identify the likely metal.",
     options:["10.5 g/mL \u2014 matches silver's known density","13.6 g/mL \u2014 matches mercury","2.7 g/mL \u2014 matches aluminum","19.3 g/mL \u2014 matches gold"],answerIndex:0},
-  {id:"tr1q7",chapter:"Textbook Review 1.1\u20131.6",number:7,type:"match",
+  {id:"tr1q7",chapter:"Chapter 1",number:7,type:"match",
     question:"(1.5, Ex.48) How many significant figures are in each measurement?",
     pairs:[
       ["(a) 38.7 g","3 sig figs"],["(b) 2\u00d710\u00b9\u2078 m","1 sig fig"],
@@ -350,13 +355,13 @@ const SEED = [
       ["(f) 17.0 kg","3 sig figs (trailing zero after a decimal counts)"],
       ["(g) 0.01400 g/mL","4 sig figs"]
     ]},
-  {id:"tr1q8",chapter:"Textbook Review 1.1\u20131.6",number:8,type:"mc",
+  {id:"tr1q8",chapter:"Chapter 1",number:8,type:"mc",
     question:"(1.5, Ex.56) Classify these measurement sets: (b) testing 25-mL pipettes, got 27.02, 26.99, 26.97, 27.01 mL (c) testing gold purity, got 99.9999%, 99.9998%, 99.9998%, 99.9999%",
     options:["(b) precise but NOT accurate (tightly clustered but consistently off-target); (c) both precise and accurate (tightly clustered AND near the true 100% value)","(b) accurate but not precise; (c) neither accurate nor precise","Both sets are neither accurate nor precise","Both sets are both accurate and precise"],answerIndex:0},
-  {id:"tr1q9",chapter:"Textbook Review 1.1\u20131.6",number:9,type:"mc",
+  {id:"tr1q9",chapter:"Chapter 1",number:9,type:"mc",
     question:"(1.6, Ex.63) How many milliliters of soft drink are in a 12.0-oz can?",
     options:["355 mL","300 mL","500 mL","118 mL"],answerIndex:0},
-  {id:"tr1q10",chapter:"Textbook Review 1.1\u20131.6",number:10,type:"mc",
+  {id:"tr1q10",chapter:"Chapter 1",number:10,type:"mc",
     question:"(1.6, Ex.93) Convert the boiling temperature of gold, 2966\u00b0C, into \u00b0F and K.",
     options:["5371\u00b0F and 3239 K","2966\u00b0F and 3239 K","5371\u00b0F and 2966 K","3239\u00b0F and 5371 K"],answerIndex:0}
 ];
@@ -379,7 +384,8 @@ const EXPLANATIONS = {
   c2q15:"Alkali metals (group 1) have just 1 valence electron; losing it gets them to a full, stable outer shell matching the nearest noble gas — forming a +1 cation. Alkaline earth metals (group 2) have 2 valence electrons and lose both the same way, forming a +2 cation. Both families lose electrons (rather than gain) because they have very few valence electrons to begin with — losing a couple is a much shorter path to stability than gaining six or seven.",
   c2q16:"Neutral tellurium has 52 electrons (matching its atomic number, 52). A -2 charge means the atom GAINED 2 electrons (protons never change during ion formation) → 52 + 2 = 54 electrons. Common trap: subtracting instead of adding — remember, negative charge always means extra electrons.",
   c2q17:"Break it into three separate lookups: PROTONS = atomic number (the subscript, 42) — this identifies the element as molybdenum (Mo) and never changes. NEUTRONS = mass number − atomic number = 97 − 42 = 55. ELECTRONS = protons − charge = 42 − 2 = 40 (a positive charge means electrons were lost, so subtract).",
-  sfq1:"80.30 has 4 sig figs; 0.2 has only 1 sig fig. In multiplication, the answer is limited to the FEWEST sig figs among the factors \u2014 so the result needs just 1 sig fig. Raw product: 80.30 \u00d7 0.2 = 16.06. Rounded to 1 sig fig \u2192 20, written WITHOUT a decimal point. Writing '20.' would signal 2 sig figs (too much precision).",
+  c2q18:"Elements in the same GROUP (column) share the same number of valence electrons, which drives similar chemical behavior — this is what 'periodicity' refers to here. Oxygen is in group 16 (the chalcogens). Sulfur sits directly below oxygen in that same group, so it behaves similarly. Bromine is group 17 (a halogen, different valence electron count) and carbon is group 14 — neither matches oxygen's group.",
+  c2q19:"Chlorine-35 and chlorine-37 are ISOTOPES of the same element. Proton count = atomic number = 17 for both — that's what makes them both chlorine (change the protons and you change the element). Both are neutral atoms, so electrons = protons = 17 for both too. The only difference is neutrons: 35 − 17 = 18 vs. 37 − 17 = 20. Isotope rule: same protons (and same electrons when neutral), different neutrons → different mass number.",  sfq1:"80.30 has 4 sig figs; 0.2 has only 1 sig fig. In multiplication, the answer is limited to the FEWEST sig figs among the factors \u2014 so the result needs just 1 sig fig. Raw product: 80.30 \u00d7 0.2 = 16.06. Rounded to 1 sig fig \u2192 20, written WITHOUT a decimal point. Writing '20.' would signal 2 sig figs (too much precision).",
   sfq2:"0.0234 has 3 sig figs (leading zeros never count); 139.37 has 5 sig figs. Keep the fewest \u2014 3 sig figs. Raw product: 0.0234 \u00d7 139.37 = 3.261258. Rounded to 3 sig figs \u2192 3.26.",
   sfq3:"The core rule for multiplication and division: your answer can't claim more precision than your least-precise measurement. Count the sig figs in each number being multiplied/divided, and match the answer's sig figs to whichever factor has the fewest. (Different rule for addition/subtraction \u2014 that goes by decimal places.)",
   tr2q1:"Atomic number (proton count) is what DEFINES an element \u2014 change it and you change the element entirely. So all isotopes of one element must share the same proton count. What varies between isotopes is the neutron count, which changes the mass number without changing which element it is.",
@@ -431,7 +437,7 @@ function loadState(){
 function saveResults(){ try{ localStorage.setItem("chem_fc_results", JSON.stringify(results)); }catch(e){} }
 function savePos(){ try{ localStorage.setItem("chem_fc_pos", JSON.stringify({chapter:activeChapter, idx})); }catch(e){} }
 
-function filtered(){ return SEED.filter(c=>c.chapter===activeChapter); }
+function filtered(){ return SEED.filter(c=>c.chapter===activeChapter).sort((a,b)=>a.number-b.number); }
 function chapterList(){
   const set = [...new Set(SEED.map(c=>c.chapter))];
   return CHAPTER_ORDER.filter(c=>set.includes(c));

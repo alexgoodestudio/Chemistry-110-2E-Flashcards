@@ -17,8 +17,12 @@ for GitHub Pages). Repo: `github.com/alexgoodestudio/Chemistry-110-2E-Flashcards
 - Data model: a flat `SEED` array of card objects, plus an `EXPLANATIONS` object keyed
   by card id. Each card has `id`, `chapter`, `number`, `type` (`"mc"` or `"match"`), and
   either `{options, answerIndex}` (mc) or `{pairs: [[prompt, answer], ...]}` (match).
-- `CHAPTER_ORDER` array controls tab order — NOT alphabetical, it's pedagogical order
-  (textbook chapters first, then quiz-sourced cards, then topic decks like sig figs).
+- Tabs are one per textbook chapter (`"Chapter 1"`, `"Chapter 2"`, ...) — Alex
+  consolidated the earlier split tabs (separate textbook-review/quiz/topic decks) on
+  2026-09-06. `CHAPTER_ORDER` controls tab order; within a tab, cards sort by their
+  `number` field (see `filtered()`), with textbook-review cards numbered first and
+  quiz-sourced cards numbered after them. When adding a card, give it the next unused
+  `number` in its chapter.
 - **Always bump `CARDS_VERSION`** (a date-stamped string near the top of the script)
   whenever `SEED` or `EXPLANATIONS` changes. This flushes stale `localStorage` progress
   data in the user's browser so old cached state doesn't collide with new content.
@@ -32,9 +36,13 @@ for GitHub Pages). Repo: `github.com/alexgoodestudio/Chemistry-110-2E-Flashcards
   content or pull from other textbooks/editions.
 - When pulling textbook review questions, cite the section and exercise number in the
   question text, e.g. `"(2.3, Ex.16) ..."` — this traces every card back to its source.
-- Quiz-sourced cards (from Alex's actual D2L quiz screenshots) go in the
-  `"Ch 2: Atoms/PTE"` chapter (or whatever the live quiz/chapter currently is) —
-  keep these separate from generic textbook-review cards.
+- Quiz-sourced cards (from Alex's actual D2L quiz screenshots) go in the chapter tab
+  the quiz covers (currently `"Chapter 2"`), keeping their quiz-prefixed ids (`c2q##`)
+  and the `// ---- (quiz-sourced) ----` comment block in `SEED` so their origin stays
+  distinguishable from generic textbook-review cards (`tr#q##`).
+- **Never add a duplicate card**: D2L quizzes recycle questions across attempts, so
+  before filing a new card, grep `SEED` for distinctive keywords from each question. If
+  it already exists (even with options reordered), point to the existing card instead.
 - Every card needs a `EXPLANATIONS[id]` entry: a "why" explanation, not just a restated
   answer. Explain the underlying reasoning/rule, not just "the answer is X."
 - If a screenshot shows the user's own quiz answers, **check them for correctness**
