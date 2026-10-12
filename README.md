@@ -13,11 +13,13 @@ general chemistry. It follows the course chapter by chapter:
 
 - **Chapter 1 & 2 tabs**: OpenStax textbook review questions and real course quiz
   questions (measurement, atoms, ions, the periodic table).
-- **Ch 4 Study Guide tab**: stoichiometry review built from the instructor's practice
-  sheet. It covers how to recognize each problem type (molarity, dilution, titration,
-  mass-to-mass, limiting reactant, percent yield), key formulas, balancing, predicting
-  reactions, net ionic equations, empirical/molecular formulas, and worked Practice 1-9
-  problems. Cards are flip-and-self-grade ("Got it" / "Missed it").
+- **Chapter 3 tab**: composition of substances and solutions, built from the
+  instructor's practice sheet: molarity, dilution, empirical/molecular formulas,
+  Avogadro's number, sig figs, and dimensional analysis, plus worked practice problems.
+- **Chapter 4 tab**: stoichiometry of chemical reactions, from the same sheet: how to
+  recognize each problem type, balancing, predicting reactions, net ionic equations,
+  mass-to-mass, limiting reactant, percent yield, and titration, plus worked practice
+  problems. Chapter 3 and 4 cards are flip-and-self-grade ("Got it" / "Missed it").
 
 It is a living document, so new cards get added as the semester goes on. Your progress
 is saved in your own browser only. This is a student-made study aid, not an official
